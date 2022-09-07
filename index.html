@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando Window</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Veja sobre hoje:</h1>
+        <input class="botao" type="button" value="Ver" onclick="clicar()">
+        <div class="res"></div>
+    </div>
+    <script>
+        var corpo = document.querySelector(`body`)
+        var botao = document.querySelector(`input.botao`)
+        var res = document.querySelector(`.res`)
+        var agora = new Date()
+        var diaSemana = agora.getDay()
+
+        // var diaSemana = 0
+
+        function clicar(){
+            switch(diaSemana){
+                case 0:
+                    res.innerHTML = `Hoje é <strong>Domingo</strong> e o fundo firaca Vermelho`
+                    corpo.style.backgroundColor = `red`
+                    break
+                
+                case 1:
+                    res.innerHTML = `Hoje é <strong>Segunda</strong> e o fundo ficara Azul`
+                    corpo.style.backgroundColor = `blue`
+                    break
+
+                case 2:
+                    res.innerHTML = `Hoje é <strong>Terça</strong> e o fundo ficara Amarelo`
+                    corpo.style.backgroundColor = `rgb(255, 255, 0)`
+                    break
+
+                case 3:
+                    res.innerHTML = `Hoje é <strong>Quarta</strong> e o fundo ficara Verde`
+                    corpo.style.backgroundColor = `rgb(0, 100, 0)`
+                    break
+
+                case 4:
+                    res.innerHTML = `Hoje é <strong>Quinta</strong> e o fundo ficara Roxo`
+                    corpo.style.backgroundColor = `rgb(128, 0, 128)`
+                    break
+
+                case 5:
+                    res.innerHTML = `Hoje é <strong>Sexta</strong> e o fundo ficara Laranja`
+                    corpo.style.backgroundColor = `rgb(255, 140, 0)`
+                    break
+
+                case 6:
+                    res.innerHTML = `Hoje é <strong>Sábado</strong> e o fundo ficara Ciano`
+                    corpo.style.backgroundColor = `rgb(0, 255, 255)`
+                    break
+
+                default:
+                    res.innerHTML = `Não existe semana`
+                    corpo.style.backgroundColor = `rgb(0, 139, 139)`
+                    break
+            }
+        }
+    </script>
+</body>
+</html>

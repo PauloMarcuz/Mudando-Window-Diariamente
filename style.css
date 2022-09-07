@@ -1,0 +1,24 @@
+*{
+    font-family: arial;
+}
+
+.botao{
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+.res{
+    margin: 20px 0;
+}
+
+.center{
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
